@@ -1,0 +1,16 @@
+<mat-card class="tile">
+
+    <mat-card-header>
+        <mat-card-title>
+            <mat-icon class="tile-icon" style="color: {{value?.color}};">{{value?.icon}}</mat-icon>
+            <div class="tile-header-text">{{value?.title}}</div>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+
+    <mat-card-content>
+        <div class="tile-content-text">
+            {{value?.value}}
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,31 @@
+@import "../colors";
+
+.tile {
+    width: 16em;
+}
+
+@mixin md-icon-size($size: 24px) {
+    font-size: $size;
+    height: $size;
+    width: $size;
+}
+  
+.tile-icon {
+    @include md-icon-size(32px);
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.tile-header-text {
+    display: inline-flex;
+    vertical-align: middle;
+    padding-left: 2px;
+}
+
+.tile-content-text {
+    text-align: center;
+    width: 100%;
+    font-size: 3em;
+    padding-top: 0.6em;
+    padding-bottom: 0.2em;
+}
