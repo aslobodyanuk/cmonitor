@@ -1,13 +1,6 @@
-<app-toolbar [title]="title"></app-toolbar>
-<app-sidenav></app-sidenav>
-<mat-grid-list cols="5">
-    <mat-grid-tile colspan="4" rowspan="2">
-        <app-line-chart class="line-chart"></app-line-chart>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-temperature-tile [value]="temperature"></app-temperature-tile>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-temperature-tile [value]="humidity"></app-temperature-tile>
-    </mat-grid-tile>
-</mat-grid-list>
+<app-sidenav>
+    <app-toolbar [title]="title"></app-toolbar>
+    <div class="router-container">
+        <router-outlet></router-outlet>
+    </div>
+</app-sidenav>

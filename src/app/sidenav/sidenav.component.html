@@ -1,4 +1,39 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
-    <mat-drawer #drawer mode="over">I'm a drawer</mat-drawer>
-    <button mat-raised-button (click)="drawer.toggle()">Toggle drawer</button>
+<mat-drawer-container class="drawer-container" [hasBackdrop]="true">
+    <mat-drawer mode="over" opened="{{sidenavService.visible}}" class="drawer" (closedStart)="sidenavService.close()">
+
+        <div class="drawer-header mat-elevation-z2">
+            <div class="grid-tile">
+                <div class="grid-tile-child">
+                    <mat-icon class="account-image">account_circle</mat-icon>
+                    <div class="name-container">
+                        <div class="name">
+                            Andrii
+                        </div>
+                        <div class="name">
+                            Slobodianiuk
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <mat-selection-list #shoes [multiple]="false">
+            <mat-list-option value="dashboard" selected="true" (click)="navigate('/')">
+                <mat-icon mat-list-icon class="nav-list-icon">dashboard</mat-icon>
+                <div mat-line class="nav-list-text">Dashboard</div>
+            </mat-list-option>
+
+            <mat-list-option value="temperature" (click)="navigate('/table-view')">
+                <mat-icon mat-list-icon class="nav-list-icon">thermostat</mat-icon>
+                <div mat-line class="nav-list-text">Temperature</div>
+            </mat-list-option>
+
+            <mat-list-option value="humidity" (click)="navigate('/table-view')">
+                <mat-icon mat-list-icon class="nav-list-icon">water_drop</mat-icon>
+                <div mat-line class="nav-list-text">Humidity</div>
+            </mat-list-option>
+        </mat-selection-list>
+
+    </mat-drawer>
+    <ng-content></ng-content>
 </mat-drawer-container>

@@ -1,6 +1,10 @@
-@import "../colors";
+@import "../variables";
 
 .chart-container {
-    margin: 1em;
     background-color: $tile-background-color;
+}
+
+.canvas-chart {
+    width: 100% !important;
+    height: auto !important;
 }

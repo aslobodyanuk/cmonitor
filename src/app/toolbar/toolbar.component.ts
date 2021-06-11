@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { SidenavService } from '../services/sidenav/sidenav.service';
 
 @Component({
   selector: 'app-toolbar',
@@ -9,7 +10,9 @@ export class ToolbarComponent implements OnInit {
 
   @Input() title?: string;
 
-  constructor() { }
+  constructor(public sidenavService: SidenavService) {
+    
+  }
 
   ngOnInit(): void {
   }

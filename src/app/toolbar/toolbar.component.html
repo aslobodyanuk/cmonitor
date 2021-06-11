@@ -1,13 +1,19 @@
-<mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-toolbar class="toolbar mat-elevation-z2">
+    <button mat-icon-button (click)="sidenavService.toggle()">
         <mat-icon>menu</mat-icon>
     </button>
-    <span>{{title}}</span>
+
+    <span class="app-title">
+        {{title}}
+    </span>
+
     <span class="spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+
+    <button mat-icon-button>
         <mat-icon>account_circle</mat-icon>
     </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+
+    <button mat-icon-button>
         <mat-icon>logout</mat-icon>
     </button>
 </mat-toolbar>

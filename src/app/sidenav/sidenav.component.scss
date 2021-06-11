@@ -1,13 +1,64 @@
-.example-container {
-    width: 400px;
-    height: 200px;
-    margin: 12px;
-    border: 1px solid #555;
-  }
-  
-  mat-drawer-content {
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+@import '../variables';
+
+.drawer-container {
+  height: 100%;
+  width: 100%;
+}
+
+.drawer {
+  // background-color: lightgreen;
+}
+
+.drawer-header {
+  background-color: $primary-color;
+  height: 18em;
+  width: 25em;
+}
+
+@mixin md-icon-size($size: 24px) {
+  font-size: $size;
+  height: $size;
+  width: $size;
+  line-height: $size;
+}
+
+.account-image {
+  color: $background-color;
+  @include md-icon-size(80px);
+}
+
+.grid-tile {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 1.6rem;
+}
+
+.grid-tile-child {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.name-container {
+  margin-bottom: 0.85em;
+}
+
+.name {
+  font-size: $large-font-size;
+  margin-top: 0.4em;
+  margin-left: 1.1rem;
+  color: $background-color-text;
+  letter-spacing: 0.05rem;
+}
+
+.nav-list-text {
+  margin-top: 0.15rem !important;
+  font-weight: 500 !important;
+}
+
+.nav-list-icon {
+  color: $primary-color;
+}

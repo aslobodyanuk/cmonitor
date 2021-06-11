@@ -19,6 +19,10 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
+import { TableViewComponent } from './table-view/table-view.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +30,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     TemperatureTileComponent,
     LineChartComponent,
     ToolbarComponent,
-    SidenavComponent
+    SidenavComponent,
+    TableViewComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +49,9 @@ import { SidenavComponent } from './sidenav/sidenav.component';
     MatDividerModule,
     MatToolbarModule,
     MatButtonModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
