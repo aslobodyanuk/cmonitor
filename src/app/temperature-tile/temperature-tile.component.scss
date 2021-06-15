@@ -1,9 +1,5 @@
 @import "../variables";
 
-.tile {
-    width: 16em;
-}
-
 @mixin md-icon-size($size: 24px) {
     font-size: $size;
     height: $size;
@@ -17,9 +13,9 @@
 }
 
 .tile-header-text {
-    display: inline-flex;
-    vertical-align: middle;
     padding-left: 2px;
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .tile-content-text {

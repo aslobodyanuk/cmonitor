@@ -1,6 +1,6 @@
+import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
 import { RecordedDataEntry } from '../models/recordedDataEntry';
-import { TemperatureService } from '../services/temperature/temperature.service';
 
 @Component({
   selector: 'app-table-view',
@@ -9,13 +9,12 @@ import { TemperatureService } from '../services/temperature/temperature.service'
 })
 export class TableViewComponent implements OnInit {
 
-  dataSource: RecordedDataEntry[] = [];
+  @Input() dataSource: RecordedDataEntry[] = [];
   displayedColumns: string[] = ['id', 'value', 'created'];
 
-  constructor(private temperatureService: TemperatureService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.dataSource = this.temperatureService.getTableValues();
   }
 
 }

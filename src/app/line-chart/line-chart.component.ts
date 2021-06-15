@@ -7,8 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class LineChartComponent implements OnInit {
 
-  @Input() height: string = "100";
-  @Input() width: string = "300";
+  @Input() heightREM: string = "100";
 
   constructor() { }
 
@@ -28,19 +27,20 @@ export class LineChartComponent implements OnInit {
     {
       backgroundColor: 'rgba(105, 0, 132, 0)',
       borderColor: '#F7464A',
-      hoverBackgroundColor: '#FF5A5E',
+      // hoverBackgroundColor: '#FF5A5E',
       borderWidth: 3,
     },
     {
       backgroundColor: 'rgba(0, 137, 132, 0)',
       borderColor: '#46BFBD',
-      hoverBackgroundColor: '#5AD3D1',
+      // hoverBackgroundColor: '#5AD3D1',
       borderWidth: 3,
     }
   ];
 
   public chartOptions: any = {
-    responsive: true
+    responsive: true,
+    maintainAspectRatio: false
   };
   public chartClicked(e: any): void { }
   public chartHovered(e: any): void { }

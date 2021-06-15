@@ -1,4 +1,4 @@
-<mat-card class="chart-container mat-elevation-z5">
+<mat-card class="chart-container mat-elevation-z3" style="height: {{heightREM}}rem;">
     <canvas mdbChart
         [chartType]="chartType"
         [datasets]="chartDatasets"
@@ -7,8 +7,6 @@
         [options]="chartOptions"
         [legend]="false"
         (chartHover)="chartHovered($event)"
-        (chartClick)="chartClicked($event)"
-        class="canvas-chart"
-        width="900vw">
+        (chartClick)="chartClicked($event)">
     </canvas>
 </mat-card>

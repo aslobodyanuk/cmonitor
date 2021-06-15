@@ -1,11 +1,13 @@
-<mat-card class="tile mat-elevation-z3">
-
-    <mat-card-header>
+<mat-card class="mat-elevation-z3">
+    <mat-card-header fxLayoutAlign="center center">
         <mat-card-title>
-            <mat-icon class="tile-icon" style="color: {{value?.color}};">{{value?.icon}}</mat-icon>
-            <div class="tile-header-text">{{value?.title}}</div>
+            <div fxLayout="row" fxLayoutAlign="center center">
+                <mat-icon class="tile-icon" style="color: {{value?.color}};">{{value?.icon}}</mat-icon>
+                <div class="tile-header-text">{{value?.title}}</div>
+            </div>
         </mat-card-title>
     </mat-card-header>
+    
     <mat-divider></mat-divider>
 
     <mat-card-content>

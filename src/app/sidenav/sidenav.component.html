@@ -1,5 +1,5 @@
 <mat-drawer-container class="drawer-container" [hasBackdrop]="true">
-    <mat-drawer mode="over" opened="{{sidenavService.visible}}" class="drawer" (closedStart)="sidenavService.close()">
+    <mat-drawer mode="over" opened="{{sidenavService.visible}}" (closedStart)="sidenavService.close()">
 
         <div class="drawer-header mat-elevation-z2">
             <div class="grid-tile">
@@ -23,12 +23,12 @@
                 <div mat-line class="nav-list-text">Dashboard</div>
             </mat-list-option>
 
-            <mat-list-option value="temperature" (click)="navigate('/table-view')">
+            <mat-list-option value="temperature" (click)="navigate('/detail/temperature')">
                 <mat-icon mat-list-icon class="nav-list-icon">thermostat</mat-icon>
                 <div mat-line class="nav-list-text">Temperature</div>
             </mat-list-option>
 
-            <mat-list-option value="humidity" (click)="navigate('/table-view')">
+            <mat-list-option value="humidity" (click)="navigate('/detail/humidity')">
                 <mat-icon mat-list-icon class="nav-list-icon">water_drop</mat-icon>
                 <div mat-line class="nav-list-text">Humidity</div>
             </mat-list-option>

@@ -1,11 +1,30 @@
-<mat-grid-list cols="5">
-    <mat-grid-tile colspan="4" rowspan="2">
-        <app-line-chart height="350" width="900"></app-line-chart>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-temperature-tile [value]="temperature"></app-temperature-tile>
-    </mat-grid-tile>
-    <mat-grid-tile>
-        <app-temperature-tile [value]="humidity"></app-temperature-tile>
-    </mat-grid-tile>
-</mat-grid-list>
+<div fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="15px">
+
+    <app-line-chart heightREM="20"></app-line-chart>
+
+    <div fxLayout="row" fxLayoutAlign="space-around stretch" fxLayoutGap="15px">
+        <div class="tile-margin" fxFlex="50">
+            <app-temperature-tile [value]="temperature"></app-temperature-tile>
+        </div>
+        <div class="tile-margin" fxFlex="50">
+            <app-temperature-tile [value]="humidity"></app-temperature-tile>
+        </div>
+    </div>
+
+</div>
+
+<hr />
+
+<div fxLayout="row" fxLayoutGap="5px" fxLayoutAlign="space-around end">
+    <div class="col3" fxFlex="10">One</div>
+    <div class="col1" fxFlex="33" fxFlexOffset="20px" fxFlexAlign="center">Two</div>
+    <div class="col2" fxFlexOrder="1" fxFlex="10">Three</div>
+</div>
+
+<hr />
+
+<div fxLayout="column" fxLayoutGap="5px">
+    <div class="col3">One</div>
+    <div class="col1">Two</div>
+    <div class="col2">Three</div>
+</div>

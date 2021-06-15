@@ -23,6 +23,9 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { TableViewComponent } from './table-view/table-view.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { TemperatureDetailedViewComponent } from './temperature-detailed-view/temperature-detailed-view.component';
+import { HumidityDetailedViewComponent } from './humidity-detailed-view/humidity-detailed-view.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     ToolbarComponent,
     SidenavComponent,
     TableViewComponent,
-    DashboardComponent
+    DashboardComponent,
+    TemperatureDetailedViewComponent,
+    HumidityDetailedViewComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +56,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     MatButtonModule,
     MatSidenavModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
