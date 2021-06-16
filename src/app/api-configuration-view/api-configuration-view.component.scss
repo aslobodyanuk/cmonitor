@@ -1,0 +1,9 @@
+@import "../variables";
+
+.fab {
+    background-color: $primary-color;
+    color: #fff;
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SidenavService } from '../services/sidenav/sidenav.service';
 import { Router } from '@angular/router';
+import { AuthenticationService } from '../services/authentication/authentication.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -9,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class SidenavComponent implements OnInit {
 
-  constructor(public sidenavService: SidenavService, private router: Router) {
-    
+  constructor(public sidenavService: SidenavService, private router: Router, private authenticationService: AuthenticationService) {
+
   }
 
   ngOnInit(): void {

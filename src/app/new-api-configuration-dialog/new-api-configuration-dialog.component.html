@@ -1,0 +1,23 @@
+<div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="0.6rem">
+    <mat-icon class="tile-icon">manage_accounts</mat-icon>
+    <div class="tile-header-text">Create new API configuration</div>
+</div>
+
+<mat-dialog-content fxLayout="column" class="dialog">
+
+    <mat-form-field>
+        <mat-label>Key</mat-label>
+        <input matInput type="text" [(ngModel)]="key">
+        <button matSuffix mat-icon-button (click)="generateGuid()" class="button">
+            <mat-icon>auto_fix_high</mat-icon>
+        </button>
+    </mat-form-field>
+
+    <mat-checkbox class="checkbox" [(ngModel)]="active">Active</mat-checkbox>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-stroked-button mat-dialog-close class="button">Cancel</button>
+  <button mat-flat-button [mat-dialog-close]="true" class="important-button">Submit</button>
+</mat-dialog-actions>

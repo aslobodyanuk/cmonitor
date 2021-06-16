@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HumidityService } from '../services/humidity/humidity.service';
+import { TemperatureService } from '../services/temperature/temperature.service';
 import { TileValue } from '../temperature-tile/TileValue';
 
 @Component({
@@ -8,23 +10,26 @@ import { TileValue } from '../temperature-tile/TileValue';
 })
 export class DashboardComponent implements OnInit {
 
-  temperature = {
-    icon: "thermostat",
-    title: "Temperature",
-    value: "36°C",
-    color: "#F7464A"
-  } as TileValue;
-
-  humidity = {
-    icon: "water_drop",
-    title: "Humidity",
-    value: "45%",
-    color: "#46BFBD"
-  } as TileValue;
-  
-  constructor() { }
+  constructor(private temperatureService: TemperatureService, private humidityService: HumidityService) { }
 
   ngOnInit(): void {
   }
 
+  getLatestHumidity(): TileValue {
+    return {
+      icon: "water_drop",
+      title: "Humidity",
+      value: this.humidityService.getLatestValue(),
+      color: "#46BFBD"
+    };
+  }
+
+  getLatestTemperature(): TileValue {
+    return {
+      icon: "thermostat",
+      title: "Temperature",
+      value: this.temperatureService.getLatestValue(),
+      color: "#F7464A"
+    };
+  }
 }

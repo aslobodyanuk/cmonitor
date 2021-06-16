@@ -8,6 +8,10 @@ export class HumidityService {
 
   constructor() { }
 
+  getLatestValue(): string {
+    return "46%";
+  }
+
   getTableValues(): RecordedDataEntry[] {
     return [
       {

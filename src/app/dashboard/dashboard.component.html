@@ -4,10 +4,10 @@
 
     <div fxLayout="row" fxLayoutAlign="space-around stretch" fxLayoutGap="15px">
         <div class="tile-margin" fxFlex="50">
-            <app-temperature-tile [value]="temperature"></app-temperature-tile>
+            <app-temperature-tile [value]="getLatestTemperature()"></app-temperature-tile>
         </div>
         <div class="tile-margin" fxFlex="50">
-            <app-temperature-tile [value]="humidity"></app-temperature-tile>
+            <app-temperature-tile [value]="getLatestHumidity()"></app-temperature-tile>
         </div>
     </div>
 

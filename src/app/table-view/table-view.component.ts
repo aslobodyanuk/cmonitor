@@ -1,6 +1,5 @@
 import { Input } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
-import { RecordedDataEntry } from '../models/recordedDataEntry';
 
 @Component({
   selector: 'app-table-view',
@@ -9,12 +8,18 @@ import { RecordedDataEntry } from '../models/recordedDataEntry';
 })
 export class TableViewComponent implements OnInit {
 
-  @Input() dataSource: RecordedDataEntry[] = [];
-  displayedColumns: string[] = ['id', 'value', 'created'];
+  @Input() dataSource: Array<any> = [];
+  @Input() displayedColumns: string[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  simpleColumns: string[] = [
+    "Id",
+    "Value",
+    "Key",
+    "Active"
+  ]
 }

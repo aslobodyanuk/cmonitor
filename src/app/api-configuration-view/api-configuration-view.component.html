@@ -1,0 +1,10 @@
+<div fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="15px">
+
+    <app-table-view [dataSource]="configValues" [displayedColumns]="['id', 'key', 'active', 'created']">
+    </app-table-view>
+
+</div>
+
+<button mat-fab class="fab" (click)="openNewItemDialog()">
+    <mat-icon>add</mat-icon>
+</button>

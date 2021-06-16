@@ -9,11 +9,12 @@
 
     <span class="spacer"></span>
 
-    <button mat-icon-button>
+    <!-- TODO: Implement account page -->
+    <!-- <button mat-icon-button>
         <mat-icon>account_circle</mat-icon>
-    </button>
+    </button> -->
 
-    <button mat-icon-button>
+    <button mat-icon-button (click)="authenticationService.logout()">
         <mat-icon>logout</mat-icon>
     </button>
 </mat-toolbar>

@@ -26,6 +26,14 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TemperatureDetailedViewComponent } from './temperature-detailed-view/temperature-detailed-view.component';
 import { HumidityDetailedViewComponent } from './humidity-detailed-view/humidity-detailed-view.component';
+import { LoginComponent } from './login/login.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { FormsModule } from '@angular/forms';
+import { ApiConfigurationViewComponent } from './api-configuration-view/api-configuration-view.component';
+import { NewApiConfigurationDialogComponent } from './new-api-configuration-dialog/new-api-configuration-dialog.component';
+import { MatDialogModule } from '@angular/material/dialog'
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 @NgModule({
   declarations: [
@@ -37,7 +45,10 @@ import { HumidityDetailedViewComponent } from './humidity-detailed-view/humidity
     TableViewComponent,
     DashboardComponent,
     TemperatureDetailedViewComponent,
-    HumidityDetailedViewComponent
+    HumidityDetailedViewComponent,
+    LoginComponent,
+    ApiConfigurationViewComponent,
+    NewApiConfigurationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -57,6 +68,11 @@ import { HumidityDetailedViewComponent } from './humidity-detailed-view/humidity
     MatSidenavModule,
     MatListModule,
     MatTableModule,
+    MatFormFieldModule,
+    FormsModule,
+    MatInputModule,
+    MatDialogModule,
+    MatCheckboxModule,
 
     FlexLayoutModule
   ],

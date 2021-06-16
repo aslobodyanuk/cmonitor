@@ -8,6 +8,10 @@ export class TemperatureService {
 
   constructor() { }
 
+  getLatestValue(): string {
+    return "37°C";
+  }
+
   getTableValues(): RecordedDataEntry[] {
     return [
       {

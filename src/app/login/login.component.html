@@ -1,0 +1,42 @@
+<div fxLayout="column" fxLayoutAlign="space-around center" class="container">
+
+    <mat-card class="tile mat-elevation-z3">
+
+        <mat-card-header fxLayoutAlign="center center">
+            <mat-card-title>
+                <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="0.6rem">
+                    <mat-icon class="tile-icon">login</mat-icon>
+                    <div class="tile-header-text">Login</div>
+                </div>
+            </mat-card-title>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content fxLayout="column" fxLayoutAlign="space-between stretch" class="tile-content">
+
+            <mat-form-field>
+                <mat-label>Login</mat-label>
+                <input matInput type="text" [(ngModel)]="login">
+                <button *ngIf="login" matSuffix mat-icon-button (click)="login=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Password</mat-label>
+                <input matInput type="password" [(ngModel)]="password">
+                <button *ngIf="password" matSuffix mat-icon-button (click)="password=''">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <button mat-flat-button class="button" fxFlex="30" (click)="authenticationService.login()">Submit</button>
+            </div>
+            
+        </mat-card-content>
+
+    </mat-card>
+
+</div>
