@@ -1,6 +1,6 @@
 <app-sidenav *ngIf="authenticationService.isAuthenticated()">
     <app-toolbar [title]="title"></app-toolbar>
-    <div class="router-container">
+    <div class="router-container" [@growInAnimation]="animationService.state" (@growInAnimation.done)="animationDone()">
         <router-outlet></router-outlet>
     </div>
 </app-sidenav>
